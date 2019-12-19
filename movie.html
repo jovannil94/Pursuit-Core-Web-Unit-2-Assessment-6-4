@@ -9,17 +9,22 @@
     <link rel="stylesheet" href="./movie.css">
     <title>Document</title>
 </head>
+
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Ghilbi">
-    <h1>Ghibli Review App</h1>
-    <select name="Movies" id="selector">
-        <option value="0">Choose A Movie</option>
-    </select>
-    <div></div>
-    <form action="input">
-        <input type="text" id="userText">
-        <button type="submit" id="submit">Submit Review</button>
-    </form>
-    <ul id="reviews"></ul>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Ghilbi">
+        <h1 id="title">Ghibli Review App</h1>
+    </header>
+    <div id="main">
+        <select name="Movies" id="selector">
+            <option value="0">Choose A Movie</option>
+        </select>
+        <div id="div1"></div>
+        <form>
+            <input type="text" id="userText">
+            <input type="submit" id="submit" placeholder="Submit Review">
+        </form>
+        <ul id="reviews"></ul>
+    </div>
 </body>
 </html>

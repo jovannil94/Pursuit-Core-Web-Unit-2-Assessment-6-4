@@ -1,3 +1,41 @@
 body {
+    display: flex;
     background-color: lavender;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 150px;
+    background-color: skyblue;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+img {
+    display: flex;
+    justify-content: flex-start;
+    height: 150px;
+    width: 30%;
+}
+#title{
+    display: flex;
+    font-weight: bold;
+    margin-left: 430px;
+    margin-top: 60px;
+}
+#main{
+    display: flex;
+    width: 60%;
+    justify-content: left;
+    flex-direction: column;
+}
+#userText{
+    width: 400px;
+}
+#selector{
+    width: 120px;
 }

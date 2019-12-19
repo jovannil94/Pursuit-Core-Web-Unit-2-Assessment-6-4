@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", ()=>{
     let select = document.querySelector("select");
-    let div = document.querySelector("div");
+    let div = document.querySelector("#div1");
     let reviews = document.querySelector("#reviews");
     let userText = document.querySelector("#userText");
     let submit = document.querySelector("#submit");
-    const getMovies = async (userText) => {
+    const getMovies = async () => {
         try{
             let res = await axios.get("https://ghibliapi.herokuapp.com/films/")
             let arr = res.data
@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 select.addEventListener("change", (event) =>{
                     select.value = event.target.value;
                     if(select.value === title){
+                        while(div.firstChild){
+                            div.innerText = ""
+                        }
                         let h3 = document.createElement("h3");
                         let p = document.createElement("p");
                         let p2 = document.createElement("p");
@@ -29,17 +32,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
                         div.appendChild(h3);
                         div.appendChild(p);
                         div.appendChild(p2);
-                        submit.addEventListener("click", () =>{
-                            let li = document.createElement("li");
-                            li.innerText = "hello"
-                            reviews.appendChild(li)
-                        })
                     }
                 })
             }
+            submit.addEventListener("click", (event) =>{
+                event.preventDefault();
+                let li = document.createElement("li");
+                li.innerText = select.value + ": " + userText.value
+                reviews.appendChild(li)
+            })
         } catch(err){
             console.log(err)
         }
     }
-    getMovies();
+    getMovies(userText);
 })

@@ -14,7 +14,6 @@ This app should have (in order of placement in the HTML):
 Please feel free to include additional `div`s and elements if they make styling the application easier.
 
 The user should be able to:
-
 - Use the `select` box to select a specific film. When they select a film, information about that film (title, release year, description) should populate in the `div` below. When they select a different film, this information should be replaced.
 - Use the `form`, below the movie information, to submit a review. Each review should be a new `li`, with the selected film's title (in bold) and a review body (not bold).
 
