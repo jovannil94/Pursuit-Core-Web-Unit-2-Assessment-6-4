@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./movie.js"></script>
+    <link rel="stylesheet" href="./movie.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png" alt="Ghilbi">
+    <h1>Ghibli Review App</h1>
+    <select name="Movies" id="selector">
+        <option value="0">Choose A Movie</option>
+    </select>
+    <div></div>
+    <form action="input">
+        <input type="text" id="userText">
+        <button type="submit" id="submit">Submit Review</button>
+    </form>
+    <ul id="reviews"></ul>
+</body>
+</html>
